@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E main.c -o main.e | export CFILE=main.c
+gcc -E $CFILE > c
