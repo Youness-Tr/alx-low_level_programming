@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 /**
- * main: entry
+ * main - entry
+ *
+ * int
  *
  * puts use: print
  *
  * description: print with puts function
  *
- * return: aliwys 0 
+ * return: always 0
 */
 
 int main(void)
