@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entry
+ * main - entry point
  *
  * int
  *
@@ -9,7 +9,7 @@
  *
  * description: print with puts function
  *
- * return: always 0
+ * Return: always 0 (success)
 */
 
 int main(void)
