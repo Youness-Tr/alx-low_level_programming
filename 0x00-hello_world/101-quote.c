@@ -2,11 +2,11 @@
 #include <unistd.h>
 
 /**
- * main: A c program that prints a line to the standard error.
+ * main - entry point
+ *
+ *description: print a qoute using write function
  *
  * Return: 1 (success)
- *
- * Int use for var
 */
 
 int main(void)
