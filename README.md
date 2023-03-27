@@ -1,1 +1,1 @@
-hello, world in C
+tarting of C
