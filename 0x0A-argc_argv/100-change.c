@@ -6,7 +6,7 @@
  *
  * for an amount of money
  * @argc: argument count
- * @argv: arguments
+ * @argv: arguments command line
  *
  * Return: 0
  */
@@ -23,8 +23,8 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	total = strtol(argv[1], &p, 10);
-	count = 0;
+	t = strtol(argv[1], &p, 10);
+	cnt = 0;
 
 	if (!*p)
 	{
