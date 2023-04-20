@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define ARGV(X, S) (argv[X][0] == S)
+
 /**
  * main - entry point, This fuction perform a calulaction base on 2 numbers and
  * the given operator.
@@ -12,22 +14,29 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*opt)(int, int);
+	int a_int, b_int, result;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
-	opt = get_op_func(argv[2]);
-
-	if (!opt)
+	a_int = atoi(argv[1]);
+	b_int = atoi(argv[3]);
+	op = argv[2];
+	if ((ARGV(2, '/') || ARGV(2, '%')) && b_int == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	if (!(get_op_func(op)))
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	result = (get_op_func(op))(a_int, b_int);
+	printf("%d\n", result);
 
-	printf("%d\n", opt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
