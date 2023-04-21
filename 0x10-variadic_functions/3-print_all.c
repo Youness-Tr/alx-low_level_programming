@@ -5,33 +5,32 @@
  * @format: specifies the necessary operations
  * Return: void
  */
-
 void print_all(const char * const format, ...)
 {
-	int c;
+	int i;
 	int flag;
 	char *str;
 	va_list a_list;
 
 	va_start(a_list, format);
-	c = 0;
-	while (format != NULL && format[c] != '\0')
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		switch (format[c])
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(a_list, int));
 				flag = 0;
 				break;
-			case 'c':
+			case 'i':
 				printf("%i", va_arg(a_list, int));
 				flag = 0;
 				break;
-			case 'c':
+			case 'f':
 				printf("%f", va_arg(a_list, double));
 				flag = 0;
 				break;
-			case 'c':
+			case 's':
 				str = va_arg(a_list, char*);
 				if (str == NULL)
 					str = "(nil)";
@@ -42,9 +41,9 @@ void print_all(const char * const format, ...)
 				flag = 1;
 				break;
 		}
-		if (format[c + 1] != '\0' && flag == 0)
+		if (format[i + 1] != '\0' && flag == 0)
 			printf(", ");
-		c++;
+		i++;
 	}
 	printf("\n");
 	va_end(a_list);
