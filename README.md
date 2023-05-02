@@ -1,1 +1,1 @@
-tarting of C
+C (programming language)
