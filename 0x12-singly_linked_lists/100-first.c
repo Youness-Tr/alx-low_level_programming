@@ -4,7 +4,7 @@
 void _const(void) __attribute__ ((constructor));
 
 /**
- * const - prints a sentence before the main
+ * _const - prints a sentence before the main
  * Return: void
  */
 void _const(void)
