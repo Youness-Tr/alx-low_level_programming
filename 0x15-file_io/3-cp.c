@@ -3,8 +3,8 @@
 
 /**
  * main - entry point c file to another file
- * @arc:arguments number
- * @arv:arguments file to and file from
+ * @argc: number of arguments.
+ * @argv: arguments vector.
  * Return: 0 in succes
  */
 
@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 	int fd_in, fd_out, read_file, check;
 	char buffer[BUFFERSIZE];
 	mode_t mode_file = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fd_in = open(argv[1], O_RDONLY);
